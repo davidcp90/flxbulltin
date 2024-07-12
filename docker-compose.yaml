@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:13
+    container_name: flexile_pg_db
+    environment:
+      POSTGRES_DB: flexile_dev
+      POSTGRES_USER: flexile
+      POSTGRES_PASSWORD: w3GhgVtsqt*JT
+    ports:
+      - "5434:5432"
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+volumes:
+  db-data:
